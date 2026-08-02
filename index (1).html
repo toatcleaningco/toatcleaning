@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To A T Cleaning | Phoenix, AZ</title>
+<meta name="description" content="Professional cleaning for apartments, homes & Airbnb rentals in Phoenix, AZ. Move-out cleans, deep cleans, and Airbnb turnovers. Text us for a same-day quote.">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --pink: #f9c9c9;
+    --red: #8B0000;
+    --black: #111111;
+    --white: #ffffff;
+    --lightpink: #fde8e8;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--pink);
+    color: var(--black);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--black);
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, #3a0000 0%, #111111 70%);
+    z-index: 0;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 40px 24px;
+    max-width: 700px;
+  }
+
+  .logo-circle {
+    width: 260px;
+    height: 260px;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .hero h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(42px, 8vw, 80px);
+    font-weight: 700;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    line-height: 1.0;
+    margin-bottom: 8px;
+  }
+
+  .hero h1 span {
+    color: var(--pink);
+  }
+
+  .hero-sub {
+    font-size: clamp(14px, 2.5vw, 18px);
+    font-weight: 300;
+    color: #c0a0a0;
+    margin-bottom: 36px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .hero-badges {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+
+  .badge {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(249,201,201,0.2);
+    color: var(--pink);
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 7px 16px;
+    border-radius: 2px;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--red);
+    color: var(--white);
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 16px 36px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s;
+  }
+
+  .btn-primary:hover { background: #a00000; }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--pink);
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 16px 36px;
+    border: 1px solid rgba(249,201,201,0.4);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--pink);
+    background: rgba(249,201,201,0.08);
+  }
+
+  /* SERVICES */
+  .services {
+    background: var(--pink);
+    padding: 80px 24px;
+  }
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .section-eyebrow {
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .section-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(28px, 5vw, 44px);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--black);
+    line-height: 1.1;
+    margin-bottom: 48px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid var(--black);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    background: var(--black);
+    border: 2px solid var(--black);
+  }
+
+  .service-card {
+    background: var(--pink);
+    padding: 32px 28px;
+    transition: background 0.2s;
+  }
+
+  .service-card:hover { background: var(--lightpink); }
+
+  .service-icon {
+    font-size: 28px;
+    margin-bottom: 14px;
+    display: block;
+  }
+
+  .service-name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--black);
+    margin-bottom: 8px;
+  }
+
+  .service-desc {
+    font-size: 13.5px;
+    font-weight: 300;
+    color: #4a3030;
+    line-height: 1.55;
+  }
+
+  /* PRICING */
+  .pricing {
+    background: var(--black);
+    padding: 80px 24px;
+  }
+
+  .pricing .section-title { color: var(--white); border-bottom-color: var(--red); }
+  .pricing .section-eyebrow { color: var(--pink); }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    background: #2a0000;
+  }
+
+  .price-card {
+    background: #1a0000;
+    padding: 28px 20px;
+    text-align: center;
+    border-bottom: 3px solid transparent;
+    transition: border-color 0.2s;
+  }
+
+  .price-card:hover { border-bottom-color: var(--pink); }
+
+  .price-size {
+    font-family: 'Oswald', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #c0a0a0;
+    margin-bottom: 12px;
+  }
+
+  .price-num {
+    font-family: 'Oswald', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--pink);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .price-from {
+    font-size: 11px;
+    color: #6a4040;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .price-note {
+    font-size: 12px;
+    color: #7a5050;
+    line-height: 1.4;
+  }
+
+  .pricing-disclaimer {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 13px;
+    color: #7a5050;
+    font-style: italic;
+  }
+
+  /* WHY US */
+  .why {
+    background: var(--lightpink);
+    padding: 80px 24px;
+  }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: var(--black);
+    border: 2px solid var(--black);
+    margin-top: 0;
+  }
+
+  .why-card {
+    background: var(--lightpink);
+    padding: 36px 28px;
+  }
+
+  .why-num {
+    font-family: 'Oswald', sans-serif;
+    font-size: 52px;
+    font-weight: 700;
+    color: rgba(139,0,0,0.15);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .why-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--red);
+    margin-bottom: 10px;
+  }
+
+  .why-desc {
+    font-size: 13.5px;
+    font-weight: 300;
+    color: #4a3030;
+    line-height: 1.6;
+  }
+
+  /* CONTACT */
+  .contact {
+    background: var(--red);
+    padding: 80px 24px;
+    text-align: center;
+  }
+
+  .contact .section-eyebrow { color: var(--pink); opacity: 0.7; }
+
+  .contact-headline {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(28px, 5vw, 52px);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+
+  .contact-sub {
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 48px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-info {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+
+  .contact-item {
+    text-align: center;
+  }
+
+  .contact-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 6px;
+  }
+
+  .contact-value {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(18px, 3vw, 26px);
+    font-weight: 600;
+    color: var(--white);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+  }
+
+  .contact-value:hover { color: var(--pink); }
+
+  .serving {
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-top: 32px;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--black);
+    padding: 20px 24px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #3a2020;
+  }
+
+  /* MOBILE */
+  @media (max-width: 640px) {
+    .services-grid { grid-template-columns: 1fr; }
+    .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+    .why-grid { grid-template-columns: 1fr; }
+    .hero-cta { flex-direction: column; align-items: center; }
+    .btn-primary, .btn-secondary { width: 100%; max-width: 280px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="logo-circle">
+      <img src="logo.png" alt="To A T Cleaning Logo">
+    </div>
+
+    <p class="hero-sub">Phoenix, Arizona · Professional Cleaning Services</p>
+    <div class="hero-badges">
+      <span class="badge">Apartments</span>
+      <span class="badge">Move-Out Cleans</span>
+      <span class="badge">Airbnb Turnovers</span>
+      <span class="badge">Deep Cleans</span>
+    </div>
+    <div class="hero-cta">
+      <a href="sms:5162620007" class="btn-primary">Text Us Now</a>
+      <a href="mailto:toatcleaningco@gmail.com" class="btn-secondary">Email Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+  <div class="container">
+    <span class="section-eyebrow">What We Do</span>
+    <h2 class="section-title">Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="service-icon">🏠</span>
+        <div class="service-name">Apartment Deep Cleans</div>
+        <p class="service-desc">Top-to-bottom cleaning for apartments and condos. Every surface, every corner, done right.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">📦</span>
+        <div class="service-name">Move-Out Cleans</div>
+        <p class="service-desc">Inspection-ready cleaning for renters moving out. Protect your deposit and leave on good terms.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🏡</span>
+        <div class="service-name">Airbnb Turnovers</div>
+        <p class="service-desc">Between-guest cleaning, linen changes, restocking, and photo documentation. Guest-ready every time.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">✨</span>
+        <div class="service-name">Rental Refreshes</div>
+        <p class="service-desc">Property managers and landlords — get your unit rent-ready fast with a thorough turnover clean.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing">
+  <div class="container">
+    <span class="section-eyebrow">Transparent Pricing</span>
+    <h2 class="section-title">Starting Rates</h2>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-size">Studio / 1BR</div>
+        <div class="price-num">$95</div>
+        <div class="price-from">Starting at</div>
+        <div class="price-note">Perfect for small apartments and studios</div>
+      </div>
+      <div class="price-card">
+        <div class="price-size">2 Bedroom</div>
+        <div class="price-num">$130</div>
+        <div class="price-from">Starting at</div>
+        <div class="price-note">Most popular — great for standard apartments</div>
+      </div>
+      <div class="price-card">
+        <div class="price-size">3 Bedroom</div>
+        <div class="price-num">$175</div>
+        <div class="price-from">Starting at</div>
+        <div class="price-note">Larger homes and rental properties</div>
+      </div>
+      <div class="price-card">
+        <div class="price-size">4BR+</div>
+        <div class="price-num">Quote</div>
+        <div class="price-from">Custom pricing</div>
+        <div class="price-note">Text us your details for a fast quote</div>
+      </div>
+    </div>
+    <p class="pricing-disclaimer">All prices are estimates and open to negotiation. Text us for a custom quote.</p>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why">
+  <div class="container">
+    <span class="section-eyebrow">Why Choose Us</span>
+    <h2 class="section-title">The To A T Difference</h2>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-num">01</div>
+        <div class="why-title">We Show Up</div>
+        <p class="why-desc">No last-minute cancellations. No chasing texts. Your clean is confirmed and handled every time.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">02</div>
+        <div class="why-title">Photo Documentation</div>
+        <p class="why-desc">We send photo reports after every job. You see exactly what was cleaned before anyone else does.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">03</div>
+        <div class="why-title">Direct Communication</div>
+        <p class="why-desc">One point of contact, always. Text us directly and get a real response — not a call center.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+  <div class="container">
+    <span class="section-eyebrow">Get In Touch</span>
+    <h2 class="contact-headline">Ready to Book<br>or Get a Quote?</h2>
+    <p class="contact-sub">Text or email us with your address, property size, and preferred date. We respond same day.</p>
+    <div class="contact-info">
+      <div class="contact-item">
+        <div class="contact-label">Text Us</div>
+        <a href="sms:5162620007" class="contact-value">516-262-0007</a>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">Email Us</div>
+        <a href="mailto:toatcleaningco@gmail.com" class="contact-value">toatcleaningco@gmail.com</a>
+      </div>
+    </div>
+    <a href="sms:5162620007" class="btn-primary" style="background:var(--black); font-size:15px; padding:18px 48px;">Text Us Now</a>
+    <p class="serving">Serving Phoenix · Scottsdale · Tempe · Mesa · Chandler · Gilbert</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 To A T Cleaning · Phoenix, AZ · toatcleaningco@gmail.com</p>
+</footer>
+
+</body>
+</html>
